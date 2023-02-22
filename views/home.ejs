@@ -1,0 +1,32 @@
+home page
+<p>
+    <a href="/">home</a>
+</p>
+<p>
+    <%if(locals.user){%>
+        <li><%=user.name%></li>
+        <a href="/users/sign-out">Sign-Out</a>
+
+        <%}else{%>
+
+         <h3>
+            <li><a href="/users/sign-in">Sign-In</a></li>
+
+        </h3>  
+          <h3>
+              <li><a href="/users/sign-up">Sign-Up</a></li>
+
+          </h3>  
+
+            <%}%>
+</p>
+
+<%= title%>
+
+<%for(u of all_users){%>
+<h1>
+
+        username: <a href="/users/about/<%=u.id%>"> <%=u.name%></a>
+</h1>
+
+    <%}%>
