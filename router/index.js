@@ -7,4 +7,7 @@ console.log('router working');
 router.get('/',homeController.home);
 router.use('/users',require('./users'))
 
+
+router.use('/api',require('./api'))
+
 module.exports=router;
